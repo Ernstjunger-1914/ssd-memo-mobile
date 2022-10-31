@@ -4,5 +4,8 @@
 
     <string name="ssd">손소독</string>
     <string name="button">버튼</string>
+    <string name="memo">메모</string>
+    <string name="memo_write">메모 작성</string>
+    <string name="no_notes_written">작성한 메모가 없습니다.</string>
 
 </resources>
