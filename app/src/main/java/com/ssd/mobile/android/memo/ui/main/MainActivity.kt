@@ -1,6 +1,5 @@
 package com.ssd.mobile.android.memo.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ssd.mobile.android.memo.R
