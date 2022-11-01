@@ -1,4 +1,5 @@
 package com.ssd.mobile.android.memo.ui.view
+
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
@@ -67,6 +68,11 @@ class HeaderView : ConstraintLayout {
             binding?.let { binding ->
                 binding.headerTitleTextView.text = title
 
+                /**
+                 * 0: 뒤로가기 버튼, title, 버튼 모두 활성화
+                 * 1: 뒤로가기 버튼 비활성화
+                 * 2: 버튼 비활성화
+                 */
                 when (type) {
                     "0" -> {
                         binding.headerTitleTextView.background =
@@ -97,13 +103,9 @@ class HeaderView : ConstraintLayout {
                         binding.headerTitleTextView.background =
                             ContextCompat.getDrawable(
                                 context,
-                                R.color.color_35373d
+                                R.color.white
                             )
-                        binding.headerBackImage.background =
-                            ContextCompat.getDrawable(
-                                context,
-                                R.color.color_35373d
-                            )
+                        binding.headerBackImage.visibility = INVISIBLE
                         binding.headerNextTextView.text = next
                         binding.headerNextTextView.setTextColor(
                             ContextCompat.getColor(
@@ -129,19 +131,17 @@ class HeaderView : ConstraintLayout {
                                 context,
                                 R.color.white
                             )
-                        binding.headerNextTextView.text = ""
-                        binding.headerNextTextView.visibility = View.INVISIBLE
-                    }
-                    "3" -> {
-                        binding.headerTitleTextView.background =
-                            ContextCompat.getDrawable(
+                        binding.headerNextTextView.text = next
+                        binding.headerNextTextView.setTextColor(
+                            ContextCompat.getColor(
                                 context,
-                                R.color.color_35373d
+                                R.color.white
                             )
-                        binding.headerBackImage.background =
+                        )
+                        binding.headerNextTextView.background =
                             ContextCompat.getDrawable(
                                 context,
-                                R.color.color_35373d
+                                R.drawable.header_button_background
                             )
                         binding.headerNextTextView.text = ""
                         binding.headerNextTextView.visibility = View.INVISIBLE
