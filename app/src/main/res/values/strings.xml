@@ -8,5 +8,9 @@
     <string name="memo_write">메모 작성</string>
     <string name="no_notes_written">작성한 메모가 없습니다.</string>
     <string name="sample_date">2022.10.31 23:19</string>
+    <string name="save">저장</string>
+    <string name="delete">제거</string>
+    <string name="write_memo">메모 작성</string>
+    <string name="memo_hint">메모를 작성하시오.</string>
 
 </resources>
