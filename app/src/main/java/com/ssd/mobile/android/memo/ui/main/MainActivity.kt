@@ -6,6 +6,7 @@ import com.ssd.mobile.android.memo.R
 import com.ssd.mobile.android.memo.base.BaseCompatActivity
 import com.ssd.mobile.android.memo.databinding.ActivityMainBinding
 import com.ssd.mobile.android.memo.ui.view.HeaderCallback
+import com.ssd.mobile.android.memo.utils.ActivityUtils
 
 class MainActivity : BaseCompatActivity<ActivityMainBinding>(), HeaderCallback {
 
@@ -26,7 +27,7 @@ class MainActivity : BaseCompatActivity<ActivityMainBinding>(), HeaderCallback {
     }
 
     override fun onNextEvent() {
-        TODO("메모 작성 페이지로 넘기기")
+        ActivityUtils.getInstance().startMemoWriteActivity(this@MainActivity)
     }
 
     companion object {
